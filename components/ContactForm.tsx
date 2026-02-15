@@ -84,7 +84,7 @@ export default function ContactForm() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <label className="space-y-2">
+        <label className="space-y-2.5">
           <span className="text-sm font-medium text-zinc-200">Full Name</span>
           <div className="relative">
             <UserRound className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-zinc-500" />
@@ -99,7 +99,7 @@ export default function ContactForm() {
           </div>
         </label>
 
-        <label className="space-y-2">
+        <label className="space-y-2.5">
           <span className="text-sm font-medium text-zinc-200">Email</span>
           <div className="relative">
             <Mail className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-zinc-500" />
@@ -116,7 +116,7 @@ export default function ContactForm() {
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <label className="space-y-2">
+        <label className="space-y-2.5">
           <span className="text-sm font-medium text-zinc-200">Organization (Optional)</span>
           <div className="relative">
             <Building2 className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-zinc-500" />
@@ -130,7 +130,7 @@ export default function ContactForm() {
           </div>
         </label>
 
-        <label className="space-y-2">
+        <label className="space-y-2.5">
           <span className="text-sm font-medium text-zinc-200">Reason</span>
           <div className="relative">
             <MessageSquareText className="pointer-events-none absolute left-3 top-1/2 z-10 size-4 -translate-y-1/2 text-zinc-500" />
@@ -152,7 +152,7 @@ export default function ContactForm() {
         </label>
       </div>
 
-      <label className="space-y-2">
+      <label className="space-y-2.5">
         <span className="text-sm font-medium text-zinc-200">Message</span>
         <textarea
           name="details"
@@ -204,3 +204,4 @@ export default function ContactForm() {
     </form>
   );
 }
+

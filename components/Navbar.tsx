@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  BriefcaseBusiness,
   Boxes,
   CircleUserRound,
   LayoutPanelTop,
@@ -16,10 +17,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navItems: { label: string; href: string; icon: LucideIcon }[] = [
-  { label: "About", href: "#about", icon: CircleUserRound },
-  { label: "Platform", href: "#platform", icon: LayoutPanelTop },
-  { label: "Products", href: "#products", icon: Boxes },
-  { label: "Contact", href: "#contact", icon: Mail },
+  { label: "About", href: "/#about", icon: CircleUserRound },
+  { label: "Platform", href: "/#platform", icon: LayoutPanelTop },
+  { label: "Products", href: "/#products", icon: Boxes },
+  { label: "Careers", href: "/careers", icon: BriefcaseBusiness },
+  { label: "Contact", href: "/#contact", icon: Mail },
 ];
 
 export default function Navbar() {

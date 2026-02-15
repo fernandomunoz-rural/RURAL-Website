@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-const CONTACT_RECIPIENT = "contact@ruraltechnologies.co";
+const CONTACT_RECIPIENT =
+  process.env.CONTACT_RECIPIENT_EMAIL || "contact@ruraltechnologies.co";
 const RESEND_API_URL = "https://api.resend.com/emails";
 
 type ContactRequest = {
@@ -78,7 +79,7 @@ export async function POST(request: Request) {
     const safeSubmittedAt = escapeHtml(submittedAt);
     const safeDetails = escapeHtml(details);
     const text = [
-      "New contact form submission",
+      "RURAL Website: New contact form submission",
       "",
       `Name: ${name}`,
       `Email: ${email}`,

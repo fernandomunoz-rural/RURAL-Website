@@ -108,7 +108,7 @@ export default function Page() {
               </p>
               <div className="mt-4 flex justify-center">
                 <Button variant="outline" className="bg-purple-600 text-white hover:bg-purple-500">
-                  <Link href="#contact">JOIN OUR TEAM</Link>
+                  <Link href="/careers">JOIN OUR TEAM</Link>
                 </Button>
               </div>
             </div>
