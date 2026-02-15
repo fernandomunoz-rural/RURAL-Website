@@ -1,6 +1,15 @@
 // app/layout.tsx
 import "./globals.css";
 import { DM_Sans, Manrope } from "next/font/google";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/rural-technologies-logo.png",
+    shortcut: "/rural-technologies-logo.png",
+    apple: "/rural-technologies-logo.png",
+  },
+};
 
 const manrope = Manrope({
   subsets: ["latin"],
