@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     shortcut: "/rural-technologies-logo.png",
     apple: "/rural-technologies-logo.png",
   },
+  title: "RURAL Technologies",
+   description: "Building technology for rural and underserved communities."
 };
 
 const manrope = Manrope({
@@ -16,6 +18,7 @@ const manrope = Manrope({
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-body",
 });
+
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
