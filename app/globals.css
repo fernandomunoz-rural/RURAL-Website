@@ -101,14 +101,18 @@
 }
 
 @layer base {
-  html,
-  body {
+  html {
+    min-height: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: auto;
   }
 
   body {
-    min-height: 100dvh;
+    min-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   * {
@@ -130,6 +134,19 @@
     [data-slot="card"] {
       transition: none !important;
       transform: none !important;
+    }
+  }
+
+  @media (max-width: 1024px), (hover: none) and (pointer: coarse) {
+    html {
+      height: 100%;
+      overflow-y: hidden;
+    }
+
+    body {
+      height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
   }
 }
