@@ -101,10 +101,31 @@
 }
 
 @layer base {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  a {
+    transition: color 220ms ease, opacity 220ms ease;
+  }
+
+  [data-slot="card"]:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-slot="card"] {
+      transition: none !important;
+      transform: none !important;
+    }
   }
 }

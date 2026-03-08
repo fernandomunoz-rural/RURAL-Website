@@ -18,6 +18,7 @@ import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/s
 
 const navItems: { label: string; href: string; icon: LucideIcon }[] = [
   { label: "About", href: "/#about", icon: CircleUserRound },
+  { label: "Services", href: "/#services", icon: LayoutPanelTop },
   { label: "Platform", href: "/#platform", icon: LayoutPanelTop },
   { label: "Products", href: "/#products", icon: Boxes },
   { label: "Careers", href: "/careers", icon: BriefcaseBusiness },
@@ -41,7 +42,9 @@ export default function Navbar() {
               className="h-10 w-10 rounded-md object-contain"
               priority
             />
-            <span className="text-sm font-semibold tracking-[0.08em] text-zinc-100">RURAL Technologies</span>
+            <span className="hidden text-sm font-semibold tracking-[0.08em] text-zinc-100 min-[380px]:inline">
+              RURAL Technologies
+            </span>
           </Link>
 
           <div className="hidden items-center gap-1 md:flex">

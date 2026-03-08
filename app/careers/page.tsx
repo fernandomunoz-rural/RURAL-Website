@@ -17,7 +17,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function CareersPage() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-zinc-950 text-zinc-100">
+    <main className="relative min-h-screen overflow-x-clip bg-zinc-950 text-zinc-100">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-140px] top-[-240px] h-[420px] w-[420px] rounded-full bg-purple-500/20 blur-3xl" />
         <div className="absolute right-[-140px] top-[20%] h-[360px] w-[360px] rounded-full bg-indigo-500/10 blur-3xl" />

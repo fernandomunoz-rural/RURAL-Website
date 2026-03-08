@@ -2,6 +2,7 @@
 import "./globals.css";
 import { DM_Sans, Manrope } from "next/font/google";
 import type { Metadata } from "next";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
   icons: {
@@ -29,7 +30,9 @@ const dmSans = DM_Sans({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${manrope.variable} ${dmSans.variable} dark`}>
-      <body className="bg-background text-foreground antialiased">{children}</body>
+      <body className="bg-background text-foreground antialiased overflow-x-hidden">
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }
