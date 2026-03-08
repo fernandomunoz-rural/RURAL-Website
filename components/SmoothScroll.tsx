@@ -6,8 +6,10 @@ import Lenis from "lenis";
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isMobileWidth = window.matchMedia("(max-width: 1024px)").matches;
     const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
-    if (reduceMotion || isTouchDevice) return;
+    const hasTouchPoints = navigator.maxTouchPoints > 0;
+    if (reduceMotion || isMobileWidth || isTouchDevice || hasTouchPoints) return;
 
     const lenis = new Lenis({
       lerp: 0.09,
