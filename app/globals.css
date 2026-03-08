@@ -104,7 +104,13 @@
   html,
   body {
     max-width: 100%;
-    overflow-x: clip;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body {
+    min-height: 100%;
+    -webkit-overflow-scrolling: touch;
   }
 
   * {

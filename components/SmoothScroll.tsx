@@ -6,13 +6,13 @@ import Lenis from "lenis";
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) return;
+    const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+    if (reduceMotion || isTouchDevice) return;
 
     const lenis = new Lenis({
       lerp: 0.09,
       smoothWheel: true,
       wheelMultiplier: 0.9,
-      touchMultiplier: 1.1,
     });
 
     let rafId = 0;

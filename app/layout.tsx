@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${manrope.variable} ${dmSans.variable} dark`}>
       <body className="bg-background text-foreground antialiased overflow-x-hidden">
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll> {children} </SmoothScroll>
       </body>
     </html>
   );
